@@ -507,6 +507,23 @@ h1.hero-title {
   gap: 8px;
 }
 
+/* Foto di halaman profil */
+.profil-photo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.profil-page-photo {
+  width: 150px; /* sebelumnya 120px */
+  height: 200px; /* sebelumnya 120px */
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 3px solid var(--accent);
+  box-shadow: 0 8px 24px rgba(217, 123, 108, 0.25);
+}
+
 .card-title::before {
   content: "";
   width: 4px;
