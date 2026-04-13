@@ -57,11 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (isOpen) {
         extraDesc.classList.remove("show");
         readMoreText.textContent = "Tampilkan Lebih Banyak";
-        readMoreIcon.textContent = "📖";
       } else {
         extraDesc.classList.add("show");
         readMoreText.textContent = "Tampilkan Lebih Sedikit";
-        readMoreIcon.textContent = "📕";
       }
     });
   }
