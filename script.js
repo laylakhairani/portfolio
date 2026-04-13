@@ -36,7 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Event listener: ripple effect on click
     link.addEventListener("click", function () {
-      document.querySelectorAll(".nav-link").forEach((l) => l.classList.remove("active"));
+      document
+        .querySelectorAll(".nav-link")
+        .forEach((l) => l.classList.remove("active"));
       this.classList.add("active");
     });
   });
@@ -44,8 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // ============================
   //  DOM: TAMPILKAN LEBIH BANYAK
   // ============================
-  const readMoreBtn  = document.getElementById("readMoreBtn");
-  const extraDesc    = document.getElementById("extraDesc");
+  const readMoreBtn = document.getElementById("readMoreBtn");
+  const extraDesc = document.getElementById("extraDesc");
   const readMoreText = document.getElementById("readMoreText");
   const readMoreIcon = document.getElementById("readMoreIcon");
 
@@ -83,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
     skillFills.forEach((fill) => observer.observe(fill));
   }
@@ -93,9 +95,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // ============================
   const contactForm = document.getElementById("contactForm");
   if (contactForm) {
-    const nameInput  = document.getElementById("name");
+    const nameInput = document.getElementById("name");
     const emailInput = document.getElementById("email");
-    const nameError  = document.getElementById("nameError");
+    const nameError = document.getElementById("nameError");
     const emailError = document.getElementById("emailError");
     const formStatus = document.getElementById("formStatus");
 
@@ -119,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let valid = true;
 
       // Reset
-      nameError.textContent  = "";
+      nameError.textContent = "";
       emailError.textContent = "";
       nameInput.classList.remove("error");
       emailInput.classList.remove("error");
@@ -146,7 +148,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (valid) {
         formStatus.innerHTML = `<span class="status-ok">✅ Pesan berhasil dikirim! Terima kasih, <strong>${nameInput.value}</strong> 🌸</span>`;
         contactForm.reset();
-        setTimeout(() => { formStatus.innerHTML = ""; }, 4000);
+        setTimeout(() => {
+          formStatus.innerHTML = "";
+        }, 4000);
       } else {
         formStatus.innerHTML = `<span class="status-err">⚠ Mohon lengkapi semua field yang wajib diisi.</span>`;
       }
