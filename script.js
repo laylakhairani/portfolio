@@ -146,13 +146,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       if (valid) {
-        formStatus.innerHTML = `<span class="status-ok">✅ Pesan berhasil dikirim! Terima kasih, <strong>${nameInput.value}</strong> 🌸</span>`;
+        formStatus.innerHTML = `<span class="status-ok">Pesan berhasil dikirim! Terima kasih, <strong>${nameInput.value}</strong> 🌸</span>`;
         contactForm.reset();
         setTimeout(() => {
           formStatus.innerHTML = "";
         }, 4000);
       } else {
-        formStatus.innerHTML = `<span class="status-err">⚠ Mohon lengkapi semua field yang wajib diisi.</span>`;
+        formStatus.innerHTML = `<span class="status-err">Mohon lengkapi semua field yang wajib diisi.</span>`;
       }
     });
   }
